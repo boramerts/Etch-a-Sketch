@@ -62,7 +62,11 @@ function getRandomColor() {
         gridSquare.style.height = `${squareSize}px`;
 
         gridSquare.addEventListener('mouseenter', function() {
-            gridSquare.style.backgroundColor = getRandomColor();
+            if (colorMode.checked) {
+              gridSquare.style.backgroundColor = getRandomColor();
+          } else {
+              gridSquare.style.backgroundColor = getBlackColor();
+          }
             });
         grid.appendChild(gridSquare);
     }
