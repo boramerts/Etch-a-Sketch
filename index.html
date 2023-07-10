@@ -9,12 +9,31 @@
 <body>
     <div class="container">
         <div id="frame">
-            <div id="top"></div>
-            <div id="bottom">
-                <div class="left nob"></div>
-                <div class="text">Etch-a-Sketch</div>
-                <div class="right nob"></div>
+            <div id="top">
+                <div class="grid"></div>
             </div>
+            <div id="bottom">
+                <button class="left nob" onclick="clearGrid()">
+                    <span class="button">Clear</span>
+                </button>
+                <div class="text">
+                    <span class="title">Etch-a-Sketch</span>
+                </div>
+                <button class="right nob" onclick="generateGrid()">
+                    <span class="button">Grid Size</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="color-switch">
+        <div class="color-mode">Color Mode</div>
+        <div class="color-div">
+            <div class="black">Black</div>
+            <label class="switch">
+                <input type="checkbox" id="colormode">
+                <span class="slider round"></span>
+            </label>
+            <div class="random">Random</div>
         </div>
     </div>
     <script src="index.js"></script>
